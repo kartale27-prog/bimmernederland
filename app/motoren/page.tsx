@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { motoren, motorSeries } from "@/lib/motoren";
+import AffiliateShop from "@/components/AffiliateShop";
 
 export const metadata: Metadata = {
   title: "BMW Motorrad – Alle Modellen 2026 | BimmerNederland.nl",
@@ -268,6 +269,21 @@ export default function MotorenPage() {
           </p>
         </div>
       </section>
+
+      <AffiliateShop
+        titel="BMW Motorrad uitrusting & accessoires"
+        accent="#e67e22"
+        producten={[
+          { naam: "Motorhelm BMW stijl", beschrijving: "Gecertificeerde helmen voor de BMW-rijder.", zoekterm: "motorhelm BMW", emoji: "🪖", prijs: "v.a. €89" },
+          { naam: "Motorjas leer / textiel", beschrijving: "Beschermende motorjas voor alle weersomstandigheden.", zoekterm: "motorjas leer heren", emoji: "🧥", prijs: "v.a. €99" },
+          { naam: "Motorhandschoenen", beschrijving: "Bescherming en grip voor lange ritten.", zoekterm: "motorhandschoenen zomer", emoji: "🧤", prijs: "v.a. €29" },
+          { naam: "GPS motor navigatie", beschrijving: "Waterdichte navigatie speciaal voor motorfietsen.", zoekterm: "gps navigatie motorfiets", emoji: "🗺️", prijs: "v.a. €149" },
+          { naam: "Motorintercom", beschrijving: "Communiceer met je mederijder via Bluetooth.", zoekterm: "motorintercom bluetooth helm", emoji: "🎧", prijs: "v.a. €59" },
+          { naam: "BMW motor onderhoud", beschrijving: "Olie en filters speciaal voor BMW Motorrad.", zoekterm: "motorolie bmw motorrad", emoji: "🛢️", prijs: "v.a. €30" },
+          { naam: "Motorketting smeerset", beschrijving: "Reiniger en smeermiddel voor je ketting.", zoekterm: "motorketting smeerset reiniging", emoji: "⛓️", prijs: "v.a. €18" },
+          { naam: "Motortas / koffer", beschrijving: "Waterdichte tas voor lange GS-reizen.", zoekterm: "motortas waterdicht bmw gs", emoji: "🎒", prijs: "v.a. €49" },
+        ]}
+      />
     </div>
   );
 }

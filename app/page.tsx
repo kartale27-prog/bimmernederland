@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AffiliateShop from "@/components/AffiliateShop";
 
 const featuredModels = [
   { naam: "BMW M3 Competition", klasse: "Sportwagen", pk: "510 pk", prijs: "vanaf €105.000", emoji: "🏎️", kleur: "#1c69d4" },
@@ -146,6 +147,16 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      <AffiliateShop
+        titel="Populaire BMW producten"
+        producten={[
+          { naam: "BMW poetsmiddel", beschrijving: "Professionele lak- en interieurreiniging.", zoekterm: "bmw poetsmiddel auto", emoji: "🧴", prijs: "v.a. €15" },
+          { naam: "OBD2 scanner BMW", beschrijving: "Lees zelf foutcodes uit via je telefoon.", zoekterm: "obd2 bmw scanner bluetooth", emoji: "🔧", prijs: "v.a. €20" },
+          { naam: "Dashcam full HD", beschrijving: "Beveiliging en bewijs bij een aanrijding.", zoekterm: "dashcam auto full hd", emoji: "📷", prijs: "v.a. €40" },
+          { naam: "BMW vloermatten", beschrijving: "Op maat voor alle BMW modellen.", zoekterm: "bmw vloermatten rubber", emoji: "🟫", prijs: "v.a. €35" },
+        ]}
+      />
     </div>
   );
 }

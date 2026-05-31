@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import AffiliateShop from "@/components/AffiliateShop";
 
 export const metadata: Metadata = {
   title: "BMW Modellen Overzicht 2026 | BimmerNederland.nl",
@@ -77,6 +78,20 @@ export default function ModellenPage() {
           ))}
         </div>
       </section>
+
+      <AffiliateShop
+        titel="BMW accessoires & onderhoud"
+        producten={[
+          { naam: "BMW Poetsmiddel set", beschrijving: "Professionele reiniging voor je BMW lak.", zoekterm: "bmw poetsmiddel auto", emoji: "🧴", prijs: "v.a. €15" },
+          { naam: "Dashcam voor BMW", beschrijving: "Beeldkwaliteit Full HD, eenvoudig te monteren.", zoekterm: "dashcam bmw auto", emoji: "📷", prijs: "v.a. €40" },
+          { naam: "BMW vloermatten", beschrijving: "Op maat gemaakte vloermatten voor alle series.", zoekterm: "bmw vloermatten", emoji: "🟫", prijs: "v.a. €35" },
+          { naam: "Motorolie BMW", beschrijving: "BMW goedgekeurde longlife motorolie.", zoekterm: "motorolie bmw longlife", emoji: "🛢️", prijs: "v.a. €25" },
+          { naam: "BMW velgen winterbanden", beschrijving: "Complete winterwielen voor jouw BMW.", zoekterm: "bmw winterbanden velgen", emoji: "❄️", prijs: "v.a. €299" },
+          { naam: "OBD2 uitleesapparaat", beschrijving: "Lees foutcodes uit je BMW met je smartphone.", zoekterm: "obd2 bmw uitlezen bluetooth", emoji: "🔧", prijs: "v.a. €20" },
+          { naam: "BMW autohoezen", beschrijving: "Bescherm je BMW tegen regen en vuil.", zoekterm: "bmw autohoes", emoji: "🛡️", prijs: "v.a. €45" },
+          { naam: "Carplay adapter BMW", beschrijving: "Draadloos Apple CarPlay voor oudere BMW's.", zoekterm: "carplay adapter bmw draadloos", emoji: "📱", prijs: "v.a. €55" },
+        ]}
+      />
     </div>
   );
 }
