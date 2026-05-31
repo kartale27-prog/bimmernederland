@@ -3,8 +3,7 @@
 const resend = new Resend(process.env.RESEND_API_KEY);
 const ADMIN = process.env.ADMIN_EMAIL ?? "kartal.e27@gmail.com";
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-// Zolang bimmernederland.nl nog niet geverifieerd is in Resend, sturen we via onboarding@resend.dev
-const FROM = "BimmerNederland <onboarding@resend.dev>";
+const FROM = "BimmerNederland <noreply@bimmernederland.nl>";
 
 // Stuur alleen als de API key is ingesteld
 function isConfigured() {
