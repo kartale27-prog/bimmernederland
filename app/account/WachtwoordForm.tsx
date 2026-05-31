@@ -19,7 +19,6 @@ export default function WachtwoordForm() {
       )}
 
       {[
-        { name: "huidig",   label: "Huidig wachtwoord",       placeholder: "Jouw huidige wachtwoord" },
         { name: "nieuw",    label: "Nieuw wachtwoord",         placeholder: "Minimaal 8 tekens" },
         { name: "bevestig", label: "Herhaal nieuw wachtwoord", placeholder: "Zelfde wachtwoord" },
       ].map(f => (
