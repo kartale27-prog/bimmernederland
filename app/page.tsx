@@ -55,7 +55,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div style={{ display: "flex", gap: "3rem", justifyContent: "center", marginTop: "4rem", flexWrap: "wrap" }}>
-            {[["50+", "BMW Modellen"], ["200+", "Artikelen"], ["10k+", "Maandelijkse lezers"]].map(([num, label]) => (
+            {[["50+", "BMW Modellen"], ["20", "Artikelen"], ["100%", "Onafhankelijk"]].map(([num, label]) => (
               <div key={label} style={{ textAlign: "center" }}>
                 <div style={{ fontSize: "2rem", fontWeight: 900, color: "#1c69d4" }}>{num}</div>
                 <div style={{ fontSize: "0.85rem", color: "#666", marginTop: "0.25rem" }}>{label}</div>

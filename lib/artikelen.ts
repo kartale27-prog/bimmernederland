@@ -264,6 +264,53 @@ export const artikelen: Artikel[] = [
     ],
   },
 
+  {
+    slug: "bmw-m3-vs-m4-welke-kiezen",
+    titel: "BMW M3 vs M4: welke moet jij kiezen in 2026?",
+    datum: "31 mei 2026",
+    leestijd: "9 min",
+    categorie: "Vergelijking",
+    kleur: "#1c69d4",
+    tags: ["M3", "M4", "Vergelijking", "M Serie"],
+    intro: "De BMW M3 en M4 delen hetzelfde motorblok, dezelfde ondersteltechnologie — en toch zijn het twee compleet verschillende auto's. Welke past bij jou?",
+    inhoud: [
+      "BMW M3 of M4 — het lijkt een simpele keuze (sedan of coupé), maar er is meer aan de hand. Beide auto's delen de S58-motor met 510 pk (Competition) of 530 pk (CS), maar de rijbeleving, het karakter en het gebruik zijn wezenlijk anders.",
+      "Carrosserie: de M3 is een vierdeurs sedan, de M4 een tweedeurs coupé. In de praktijk betekent dit: de M3 is praktischer voor dagelijks gebruik, gezinnen en lange ritten. De M4 is meer uitgesproken, sportiever in beleving en visueel agressiever.",
+      "Gewicht: de M4 is circa 20 kg lichter dan de M3. Op het circuit is dat merkbaar — de M4 stuurt net iets scherper en reageert sneller op stuurcorrecties. Op de openbare weg is het verschil verwaarloosbaar.",
+      "Prijs 2026: de M3 Competition begint bij €105.000, de M4 Competition bij €110.000. De M4 Competition xDrive (met vierwielaandrijving) kost €118.000. De M3 is de betere waardebehoud-keuze op de occasionmarkt.",
+      "Voor wie? Kies de M3 als je dagelijks rijdt, passagiers meeneemt of een gezinsauto wil die ook een raceauto is. Kies de M4 als het design en de coupé-beleving prioriteit hebben en de praktische beperkingen geen probleem zijn.",
+      "Conclusie: er is geen objectief betere keuze. De M3 wint op veelzijdigheid, de M4 op emotie en design. Beide zijn het beste wat je voor dit geld kunt kopen in de sportwagensegment.",
+    ],
+    bronnen: [
+      { label: "BMW.nl – M3 Competition configurator", url: "https://www.bmw.nl" },
+      { label: "Autovisie – BMW M3 vs M4 vergelijkingstest", url: "https://www.autovisie.nl" },
+      { label: "AutoWeek – M4 Competition xDrive rijtest", url: "https://www.autoweek.nl" },
+    ],
+  },
+  {
+    slug: "goedkoopste-bmw-modellen-2026",
+    titel: "Goedkoopste BMW modellen 2026: BMW rijden voor minder",
+    datum: "31 mei 2026",
+    leestijd: "7 min",
+    categorie: "Koopgids",
+    kleur: "#27ae60",
+    tags: ["Koopgids", "1 Serie", "2 Serie", "Occasion", "Budget"],
+    intro: "BMW heeft een premium imago, maar rijden hoeft niet altijd een ton te kosten. Dit zijn de goedkoopste nieuwe en tweedehands BMW's van 2026.",
+    inhoud: [
+      "Goedkoopste nieuwe BMW in 2026: de BMW 1 Serie 118i begint bij €38.500. Dat is minder dan een goed uitgeruste Volkswagen Golf GTI — met een BMW-badge, iDrive 9 en een verfijnde rijdynamiek. Zes cilinders zijn er niet, maar de 136 pk sterke driecilinder doet het goed in de stad.",
+      "BMW 2 Serie Active Tourer: vanaf €41.500 krijg je een compacte MPV met voorwielaandrijving. Niet de meest zuivere BMW-ervaring, maar ideaal voor gezinnen die een praktische, premium auto willen zonder grote sedan-prijs.",
+      "Beste budgetkeuze: de BMW 3 Serie F30 occasion. Een nette 2016 316i kost €14.000–€18.000 en heeft de klassieke BMW-eigenschappen: achterwielaandrijving, strakke besturing en een premium interieur.",
+      "Elektrisch budget: de BMW i3 is technisch verouderd maar tweedehands een koopje. Een 2019 i3 met 42 kWh accu kost €12.000–€16.000 en heeft nog 200 km actieradius. Ideaal voor stadgebruik.",
+      "Motorrad alternatief: de BMW G 310 R begint bij €5.650 — de goedkoopste nieuwe BMW die je kunt kopen. Instapmotor met BMW-DNA voor rijders die op budget willen starten.",
+      "Tip: kijk ook naar BMW Certified Pre-Owned (bij BMW dealers). Deze occasions hebben garantie, zijn doorgelicht en vallen onder gestandaardiseerde kwaliteitscriteria. Soms maar €2.000–€3.000 duurder dan een privé-occasion — maar met veel minder risico.",
+    ],
+    bronnen: [
+      { label: "BMW.nl – Nieuwe modellen en prijslijst 2026", url: "https://www.bmw.nl" },
+      { label: "Marktplaats.nl – BMW occasions overzicht", url: "https://www.marktplaats.nl" },
+      { label: "ANWB – Autokosten vergelijker", url: "https://www.anwb.nl" },
+    ],
+  },
+
   // ── Motorrad artikelen ────────────────────────────────────────────
   {
     slug: "bmw-r-1300-gs-review",
