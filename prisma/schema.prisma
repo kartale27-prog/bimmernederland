@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id                   String   @id @default(cuid())
+  username             String   @unique
+  email                String   @unique
+  passwordHash         String
+  createdAt            DateTime @default(now())
+  // Notificatie-instellingen
+  notifEigenTopic      Boolean  @default(true)   // reactie op mijn eigen topic
+  notifBetrokkenThread Boolean  @default(true)   // reactie in thread waar ik ook gepost heb
+  threads              Thread[]
+  posts                Post[]
+}
+
+model ForumCategory {
+  id          String          @id @default(cuid())
+  slug        String          @unique
+  naam        String
+  beschrijving String
+  type        String          // "auto" | "motor" | "algemeen"
+  volgorde    Int
+  subforums   ForumSubforum[]
+}
+
+model ForumSubforum {
+  id           String        @id @default(cuid())
+  slug         String        @unique
+  naam         String
+  beschrijving String
+  categoryId   String
+  category     ForumCategory @relation(fields: [categoryId], references: [id])
+  volgorde     Int
+  threads      Thread[]
+}
+
+model Thread {
+  id          String        @id @default(cuid())
+  titel       String
+  subforumId  String
+  subforum    ForumSubforum @relation(fields: [subforumId], references: [id])
+  authorId    String
+  author      User          @relation(fields: [authorId], references: [id])
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  views       Int           @default(0)
+  isPinned    Boolean       @default(false)
+  isLocked    Boolean       @default(false)
+  posts       Post[]
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  inhoud    String
+  threadId  String
+  thread    Thread   @relation(fields: [threadId], references: [id])
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

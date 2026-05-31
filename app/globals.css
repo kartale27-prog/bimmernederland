@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --bmw-blue: #1c69d4;
+  --bmw-dark: #0a0a0a;
+  --bmw-gray: #111111;
+  --bmw-card: #161616;
+  --bmw-border: #2a2a2a;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bmw-dark);
+  color: #ffffff;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.bmw-gradient {
+  background: linear-gradient(135deg, #0a0a0a 0%, #0d1b3e 50%, #0a0a0a 100%);
+}
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(28, 105, 212, 0.25);
+}

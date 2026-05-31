@@ -1,0 +1,409 @@
+export interface Artikel {
+  slug: string;
+  titel: string;
+  datum: string;
+  leestijd: string;
+  categorie: string;
+  intro: string;
+  inhoud: string[];
+  tags: string[];
+  kleur: string;
+  bronnen: { label: string; url: string }[];
+}
+
+export const artikelen: Artikel[] = [
+  {
+    slug: "bmw-m3-touring-cs-review",
+    titel: "BMW M3 Touring CS: de ultieme stationwagen?",
+    datum: "28 mei 2026",
+    leestijd: "8 min",
+    categorie: "Review",
+    kleur: "#1c69d4",
+    tags: ["M3", "Touring", "Review"],
+    intro: "BMW heeft de lat opnieuw hoger gelegd met de M3 Touring CS. Met 560 pk en een gewicht van 1.640 kg is dit de scherpste stationwagen die ooit uit München is gekomen.",
+    inhoud: [
+      "De BMW M3 Touring CS is de logische volgende stap na de reguliere M3 Touring. BMW pakt uit met een handmatig geschakelde zesbak, een carbon dak en een volledig herzien onderstel.",
+      "Op het circuit is de winst direct voelbaar. De auto stuurt directer, remt harder en blijft vlakker in de bochten dan zijn broer. Toch is het dagelijks gebruik niet opgeofferd: de kofferbak biedt nog steeds 500 liter ruimte.",
+      "De 3,0-liter zes-in-lijn levert zijn 560 pk op een bruuske, directe manier. Trek je de schakelaar naar Sport Plus, dan klinkt de uitlaat alsof er een vliegtuig uit de uitlaten ontsnapt.",
+      "Conclusie: voor wie een raceauto wil met laadruimte, is de M3 Touring CS de beste auto ter wereld. De vraag is of je er €135.000 voor over hebt.",
+    ],
+    bronnen: [
+      { label: "BMW Persmap – M3 Touring CS", url: "https://www.press.bmwgroup.com" },
+      { label: "Autovisie – Eerste rijtest M3 Touring CS", url: "https://www.autovisie.nl" },
+    ],
+  },
+  {
+    slug: "bmw-m5-koopgids-alle-generaties",
+    titel: "Koopgids: welke BMW M5 is de beste koop?",
+    datum: "22 mei 2026",
+    leestijd: "12 min",
+    categorie: "Koopgids",
+    kleur: "#e74c3c",
+    tags: ["M5", "Koopgids", "Occasion"],
+    intro: "De BMW M5 bestaat al 40 jaar. Van de E28 tot de G90 — wij vergelijken elke generatie en helpen je de beste koop te vinden.",
+    inhoud: [
+      "De E39 M5 (1998–2003) wordt door velen beschouwd als de beste M5 ooit. De 5,0-liter V8 klinkt goddelijk en het gewicht is nog beheersbaar. Nadeel: onderhoud is prijzig.",
+      "De E60 M5 (2004–2010) met zijn V10 is spectaculair maar beruchtig om betrouwbaarheidsproblemen. Koop er een alleen als je een goed onderhoudshistorie kunt aantonen.",
+      "De F10 M5 (2011–2016) is de eerste met een turbomotor. Sneller dan zijn voorgangers, maar minder karaktervol. Goed ingereden exemplaren zijn nu voor €30.000–€50.000 te vinden.",
+      "De G90 M5 (2024–heden) is hybride en heeft 727 pk. Als occasion is dit nog te vers, maar als nieuwe auto de meest complete M5 ooit.",
+    ],
+    bronnen: [
+      { label: "BMW Blog – M5 History", url: "https://www.bmwblog.com" },
+      { label: "Marktplaats.nl – BMW M5 occasions", url: "https://www.marktplaats.nl" },
+      { label: "AutoWeek – M5 generaties vergeleken", url: "https://www.autoweek.nl" },
+    ],
+  },
+  {
+    slug: "bmw-i4-m50-vs-tesla-model-3",
+    titel: "BMW i4 M50 vs. Tesla Model 3 Performance: wie wint?",
+    datum: "15 mei 2026",
+    leestijd: "10 min",
+    categorie: "Vergelijking",
+    kleur: "#8e44ad",
+    tags: ["i4", "Elektrisch", "Vergelijking", "Tesla"],
+    intro: "Elektrisch rijplezier: de BMW i4 M50 neemt het op tegen de Tesla Model 3 Performance. Wie wint op het circuit en wie is praktischer?",
+    inhoud: [
+      "Op papier is het dichtbij: BMW levert 544 pk, Tesla 460 pk. Maar de 0-100 verschilt nauwelijks: 3,9 vs 3,1 seconden in het voordeel van Tesla.",
+      "Op de snelweg wint BMW het overtuigend. Het rijgedrag is verfijnder, het interieur kwalitatief beter en de adaptieve cruise control reageert natuurlijker.",
+      "Opladen: Tesla wint nog altijd op infrastructuur. Superchargers zijn overal, terwijl BMW afhankelijk is van derden zoals Ionity en Allego.",
+      "Conclusie: kies de Tesla als je een efficiënte daily driver wil. Kies de BMW i4 als rijplezier en afwerking prioriteit hebben.",
+    ],
+    bronnen: [
+      { label: "TopGear Nederland – BMW i4 M50 rijtest", url: "https://www.topgear.nl" },
+      { label: "EV Database – BMW i4 specs", url: "https://ev-database.nl" },
+      { label: "Tesla.com – Model 3 specs", url: "https://www.tesla.com/nl_NL/model3" },
+    ],
+  },
+  {
+    slug: "5-redenen-bmw-x3-populair",
+    titel: "5 redenen waarom de BMW X3 zo populair is in Nederland",
+    datum: "10 mei 2026",
+    leestijd: "5 min",
+    categorie: "Artikel",
+    kleur: "#27ae60",
+    tags: ["X3", "SUV", "Populair"],
+    intro: "De BMW X3 is al jaren de bestverkochte BMW in Nederland. We onderzoeken waarom deze compacte SUV zo geliefd is.",
+    inhoud: [
+      "1. Perfecte maat. De X3 past in vrijwel elke parkeergarage maar biedt toch 550 liter kofferbakruimte. Voor Nederlandse wegen is dat ideaal.",
+      "2. Breed motorenaanbod. Van zuinige 18d diesels tot de brute X3 M Competition met 510 pk — er is voor ieder wat wils.",
+      "3. Hoge restwaarde. BMW X3's houden hun waarde goed. Na 3 jaar verlies je gemiddeld slechts 35%, terwijl veel concurrenten 45–50% verliezen.",
+      "4. Technologie. Het iDrive 9 infotainment systeem is intuïtief en krijgt regelmatig over-the-air updates.",
+      "5. Uitstraling. De BMW-neus, de spatbordblisters en de L-vormige achterlichten zorgen voor een herkenbaar, premium uiterlijk.",
+    ],
+    bronnen: [
+      { label: "BOVAG – Verkoopcijfers SUV Nederland 2025", url: "https://www.bovag.nl" },
+      { label: "Autovisie – BMW X3 langdurige test", url: "https://www.autovisie.nl" },
+    ],
+  },
+  {
+    slug: "onderhoud-bmw-m-auto-kosten",
+    titel: "Onderhoud BMW M-auto: wat kost het écht?",
+    datum: "5 mei 2026",
+    leestijd: "7 min",
+    categorie: "Praktisch",
+    kleur: "#f39c12",
+    tags: ["Onderhoud", "Kosten", "Praktisch"],
+    intro: "Een BMW M-auto kopen is één ding, onderhouden is iets anders. We zetten alle kosten op een rij.",
+    inhoud: [
+      "Grote beurt (elke 2 jaar of 25.000 km): €350–€600 bij BMW dealer, €150–€250 bij gespecialiseerde BMW-garage. Verschil zit in arbeidskosten en gebruik van originele onderdelen.",
+      "Remmen: M-auto's hebben grotere remmen die harder slijten. Voorremmen vervangen kost €400–€700. Achterremmen €250–€450. Verwacht dit elke 40.000–60.000 km.",
+      "Banden: Breedbandige M-banden kosten €250–€400 per stuk. Een set van vier: €1.000–€1.600. Advies: zet twee sets op velgen (zomer/winter) voor langere levensduur.",
+      "BMW Service Inclusive is het slimste dat je kunt doen. Voor €1.500–€2.500 zijn alle services 5 jaar/100.000 km gedekt. Dat scheelt op jaarbasis fors.",
+    ],
+    bronnen: [
+      { label: "BMW Nederland – Service & Onderhoud", url: "https://www.bmw.nl/nl/topics/fascination-bmw/bmw-service.html" },
+      { label: "AutoForum.nl – M3 onderhoudskosten topic", url: "https://www.autoforum.nl" },
+    ],
+  },
+  {
+    slug: "geschiedenis-bmw-m3-e30-tot-g80",
+    titel: "De geschiedenis van de BMW M3: van E30 tot G80",
+    datum: "1 mei 2026",
+    leestijd: "15 min",
+    categorie: "Geschiedenis",
+    kleur: "#e67e22",
+    tags: ["M3", "Geschiedenis", "Klassiek"],
+    intro: "Geen auto heeft de sportwagenwereld zo beïnvloed als de BMW M3. Van de legendarische E30 tot de huidige G80.",
+    inhoud: [
+      "E30 M3 (1986–1991): geboren voor de DTM. De viercilinder S14 leverde 200 pk in straatversie, maar tot 300 pk in racuitvoering. Tegenwoordig zijn goede exemplaren €80.000–€150.000 waard.",
+      "E36 M3 (1992–1999): groter, zwaarder, maar ook verfijnder. De 3,2-liter zes-in-lijn was een hoogtepunt in mechanische motorenbouw. In de VS verkocht als M3 met de kleinere 3,0-liter.",
+      "E46 M3 (2000–2006): door velen de mooiste M3. De S54-motor klinkt onvergetelijk. Pas op voor subframe-problemen en controleer altijd de VANOS.",
+      "E90/E92 M3 (2007–2013): de enige M3 met een V8 (S65). Klinkt fenomenaal maar heeft SMG-versnellingsbakproblemen. Kies een exemplaar met handgeschakelde bak.",
+      "F80 M3 (2014–2018): terug naar zes cilinders, maar nu met turbo. Controversieel maar ongekend snel. Competition-versie is de best rijdende van de reeks.",
+      "G80 M3 (2021–heden): controversiële neus maar technisch de beste M3 ooit. xDrive en Competition Package maken hem ook bij slecht weer perfect beheersbaar.",
+    ],
+    bronnen: [
+      { label: "BMW M GmbH – officiële M3 geschiedenis", url: "https://www.bmw-m.com" },
+      { label: "Evo Magazine – BMW M3: every generation tested", url: "https://www.evo.co.uk" },
+      { label: "Autovisie – 40 jaar BMW M3", url: "https://www.autovisie.nl" },
+    ],
+  },
+  {
+    slug: "bmw-xm-label-red-review",
+    titel: "BMW XM Label Red: monsterlijk of meesterlijk?",
+    datum: "27 april 2026",
+    leestijd: "9 min",
+    categorie: "Review",
+    kleur: "#c0392b",
+    tags: ["XM", "PHEV", "M Serie", "Review"],
+    intro: "748 pk, een hybride aandrijflijn en een prijs van €210.000. De BMW XM Label Red is het meest polariserende M-product ooit.",
+    inhoud: [
+      "BMW deed iets wat het lang niet deed: een compleet nieuw M-model bouwen dat niet gebaseerd is op een bestaande auto. De XM is een plug-in hybride SUV met 748 pk uit een 4,4-liter twin-turbo V8 gecombineerd met een elektromotor.",
+      "Het design deelt de gemoederen. De enorme grille, de gespierde achterkant en het theatrale interieur — je vindt het schitterend of afschuwelijk. Neutraal blijven is onmogelijk.",
+      "Rijden: de XM doet alles wat je niet verwacht van een 2.510 kg zware SUV. Hij sprint in 3,8 seconden naar 100 en voelt in bochten genuanceerder dan zijn gewicht doet vermoeden.",
+      "Op puur elektrisch rijdt hij tot 82 kilometer op de WLTP-cyclus. In de praktijk is dat 55–65 km. Als je dagelijks oplaadt, rijd je de meeste kilometers emissievrij.",
+    ],
+    bronnen: [
+      { label: "BMW Persmap – BMW XM Label Red", url: "https://www.press.bmwgroup.com" },
+      { label: "Car Magazine – BMW XM Label Red first drive", url: "https://www.carmagazine.co.uk" },
+    ],
+  },
+  {
+    slug: "bmw-versus-mercedes-ami",
+    titel: "BMW vs. Mercedes: wie maakt de betere auto in 2026?",
+    datum: "20 april 2026",
+    leestijd: "11 min",
+    categorie: "Vergelijking",
+    kleur: "#2c3e50",
+    tags: ["BMW", "Mercedes", "AMG", "Vergelijking"],
+    intro: "De eeuwige strijd: BMW vs. Mercedes. In 2026 staan ze technologisch dichter bij elkaar dan ooit — maar wie wint echt?",
+    inhoud: [
+      "Rijdynamiek: BMW wint. De M GmbH-modellen zijn op het circuit sneller, scherper en communicatiever dan de AMG-equivalenten. Dat is decennialang zo gebleven.",
+      "Luxe en comfort: Mercedes wint. Het interieur van de nieuwe S-Klasse is gewoon een niveau boven de BMW 7 Serie. MBUX is ook intuïtiever dan iDrive 9.",
+      "Elektrisch: gelijkspel. BMW heeft de i4 en iX, Mercedes de EQE en EQS. Beide merken worstelen met software-updates en actieradius in de praktijk.",
+      "Betrouwbaarheid: BMW wint licht. Volgens ADAC-statistieken scoren BMW's van 2020–2025 gemiddeld beter dan Mercedes op storingen en garantieclaims.",
+      "Conclusie: kies BMW als rijplezier prioriteit heeft, kies Mercedes als comfort en status bovenaan staan.",
+    ],
+    bronnen: [
+      { label: "ADAC Pannenstatistik 2025", url: "https://www.adac.de" },
+      { label: "AutoBild – BMW vs Mercedes vergelijkingstest", url: "https://www.autobild.de" },
+      { label: "Autovisie – M3 vs AMG C63 tracktest", url: "https://www.autovisie.nl" },
+    ],
+  },
+  {
+    slug: "bmw-3-serie-occasion-koopadvies",
+    titel: "BMW 3 Serie occasion kopen: waar moet je op letten?",
+    datum: "14 april 2026",
+    leestijd: "8 min",
+    categorie: "Koopgids",
+    kleur: "#3498db",
+    tags: ["3 Serie", "Occasion", "Koopgids"],
+    intro: "De BMW 3 Serie is de meest gekochte BMW als occasion in Nederland. Maar waar moet je op letten om geen kat in de zak te kopen?",
+    inhoud: [
+      "Welke generatie? De F30 (2011–2019) is de beste instap. Betrouwbaar, goedkoop in onderhoud en voldoende modern. De G20 (2019–heden) is de nieuwste maar ook duurder.",
+      "Controleer de motorcode. De B48 (viercilinder benzine, 2015+) is solide. De N20 (2011–2016) heeft bekende kettingproblemen — laat die altijd nakijken.",
+      "Bekijk de onderhoudshistorie. Een BMW zonder BMW Service boekje is een rode vlag. Vraag altijd om uitdraaien van dealer-beurten.",
+      "Laat een BOVAG- of RAI-keuringsrapport maken. Voor €75–€100 weet je precies wat er aan de hand is. Dit heb je later nodig bij eventuele claims.",
+      "Prijscheck: een nette F30 320i uit 2015 kost nu €15.000–€22.000. Een G20 320i uit 2020 €28.000–€38.000. Alles eronder is verdacht goedkoop.",
+    ],
+    bronnen: [
+      { label: "Marktplaats.nl – BMW 3 Serie occasion", url: "https://www.marktplaats.nl" },
+      { label: "AutoScout24 – BMW 3 Serie koopadvies", url: "https://www.autoscout24.nl" },
+      { label: "BOVAG – Occasion keuring info", url: "https://www.bovag.nl" },
+    ],
+  },
+  {
+    slug: "bmw-elektrisch-2026-strategie",
+    titel: "Volledig elektrisch in 2030: BMW's grote gok",
+    datum: "8 april 2026",
+    leestijd: "6 min",
+    categorie: "Industrie",
+    kleur: "#1abc9c",
+    tags: ["Elektrisch", "Strategie", "Toekomst"],
+    intro: "BMW zet in op volledig elektrisch tegen 2030 in Europa. Een moedige stap — maar is het realistisch?",
+    inhoud: [
+      "BMW heeft aangekondigd dat alle nieuwe modellen die na 2030 op de Europese markt komen volledig elektrisch zullen zijn. De huidige plug-in hybrides zijn de overbrugging.",
+      "De Neue Klasse-architectuur, die in 2025 werd geïntroduceerd, is BMW's antwoord op Tesla's platform. Meer actieradius, snellere laadtijden en meer geïntegreerde software.",
+      "Kritische noot: laadinfrastructuur in Nederland groeit, maar nog niet snel genoeg. BMW-rijders die buiten de Randstad wonen klagen over wachttijden bij snelladers.",
+      "Wat dit voor M-modellen betekent: de BMW M iX5 en i4 M50 bewijzen al dat elektrische M-auto's mogelijk zijn. Toch: een volledig elektrische M3 zonder motorgeluid — dat wordt wennen.",
+    ],
+    bronnen: [
+      { label: "BMW Group – Strategie 2030 persbericht", url: "https://www.press.bmwgroup.com" },
+      { label: "Rijksoverheid – Klimaatakkoord mobiliteit", url: "https://www.rijksoverheid.nl" },
+      { label: "NRC – Autoindustrie en de elektrische transitie", url: "https://www.nrc.nl" },
+    ],
+  },
+  {
+    slug: "bmw-m-gmbh-geschiedenis",
+    titel: "BMW M GmbH: hoe een divisie een legende werd",
+    datum: "1 april 2026",
+    leestijd: "10 min",
+    categorie: "Geschiedenis",
+    kleur: "#e74c3c",
+    tags: ["M GmbH", "Geschiedenis", "M Serie"],
+    intro: "In 1972 begon BMW Motorsport GmbH als een klein team raceauto's te bouwen. 50 jaar later is M BMW's meest winstgevende divisie.",
+    inhoud: [
+      "BMW Motorsport GmbH werd in 1972 opgericht, primair om te concurreren in de Formule 2 en touring cars. De vroege M1 (1978) was hun eerste straatauto — en een van de mooiste BMW's ooit gemaakt.",
+      "De doorbraak: de E30 M3 in 1986. Gebouwd om de DTM te winnen, maar zo goed dat hij een cultauto werd. Meer dan 17.000 exemplaren werden verkocht, veel meer dan gepland.",
+      "In de jaren '90 breidde M uit naar de M5, M6 en uiteindelijk X-modellen. De filosofie bleef: neem een productieauto, optimaliseer alles, houd hem rijbaar op de openbare weg.",
+      "Vandaag de dag is het M-logo een van de meest herkende automotiefmerken ter wereld. BMW rapporteerde in 2024 dat één op de vier BMW's in Europa een M-uitvoering is.",
+    ],
+    bronnen: [
+      { label: "BMW M GmbH – Officiële bedrijfsgeschiedenis", url: "https://www.bmw-m.com" },
+      { label: "Motor Trend – 50 years of BMW M", url: "https://www.motortrend.com" },
+    ],
+  },
+  {
+    slug: "bmw-1-serie-onderschat-auto",
+    titel: "De BMW 1 Serie: de meest onderschatte auto van dit moment",
+    datum: "25 maart 2026",
+    leestijd: "6 min",
+    categorie: "Artikel",
+    kleur: "#27ae60",
+    tags: ["1 Serie", "Hatchback", "Onderschat"],
+    intro: "Iedereen kijkt naar de M3 en X5, maar de BMW 1 Serie is misschien wel de beste alledaagse auto in zijn segment.",
+    inhoud: [
+      "BMW schakelde met de F40 (2019) over van achterwielaandrijving naar voorwielaandrijving. Dat zette veel M3-puristen op hun achterste benen. Maar in de praktijk? De 1 Serie rijdt uitstekend.",
+      "Het interieur van de 1 Serie pakt in zijn klasse. Het iDrive-systeem, de sportzetels en de afwerking zijn een klasse beter dan wat Volkswagen Golf of Audi A3 bieden.",
+      "De 120i met 170 pk is het zoete punt. Levendig genoeg voor dagelijks gebruik, zuinig op de snelweg (1-op-16 is haalbaar) en goedkoop in onderhoud.",
+      "Rijafstand maakt het uit. In de stad en op slingerweggetjes is de 1 Serie een genot. Op de autobahn merk je dat het geen Touring is — maar voor 90% van de Nederlandse ritten is dat irrelevant.",
+    ],
+    bronnen: [
+      { label: "Autovisie – BMW 1 Serie F40 langdurige test", url: "https://www.autovisie.nl" },
+      { label: "AutoWeek – BMW 120i rijtest", url: "https://www.autoweek.nl" },
+    ],
+  },
+
+  // ── Motorrad artikelen ────────────────────────────────────────────
+  {
+    slug: "bmw-r-1300-gs-review",
+    titel: "BMW R 1300 GS getest: is dit de beste adventure-motor ooit?",
+    datum: "26 mei 2026",
+    leestijd: "9 min",
+    categorie: "Review",
+    kleur: "#e67e22",
+    tags: ["R 1300 GS", "GS Serie", "Adventure", "Motorrad"],
+    intro:
+      "BMW vernieuwde de meest verkochte adventure-motor ter wereld: de R 1300 GS. Zwaarder op papier, maar lichter in de beleving. We reden er drie dagen mee door de Alpen.",
+    inhoud: [
+      "De R 1300 GS (2023) is de opvolger van de R 1250 GS en brengt een compleet nieuw motorblok, een herzien telelever-voorwiel systeem en — als optie — de ASA (Automated Shift Assistant). Dat laatste is een gamechanger: koppeling bedienen is verleden tijd.",
+      "In de Alpen toont de GS zijn beste kant. Op smalle bergweggetjes is hij verrassend wendbaar voor een motor van 237 kg. Het nieuwe onderstel absorbeert gaten en bulten soepel, terwijl de 145 pk je altijd genoeg reserve geeft voor een snelle inhaalmanoeuvre.",
+      "Het TFT-display is helder, logisch ingedeeld en verbindt moeiteloos met je smartphone. Navigatie via Android Auto of Apple CarPlay werkt feilloos. BMW Connectivity is nu standaard — niet meer tegen meerprijs.",
+      "Minpunten: de zitpositie is hoog (890 mm standaard), wat voor kortere rijders een uitdaging is. Het gewicht van 237 kg is voelbaar bij lage snelheid en bij manoeuvreren. De prijs — €18.750 startend — is aanzienlijk.",
+      "Conclusie: de R 1300 GS is opnieuw de benchmark in de adventure-klasse. Geen andere motor combineert offroad-capaciteit, comfortabel reizen en technologische verfijning zo goed.",
+    ],
+    bronnen: [
+      { label: "BMW Motorrad Persmap – R 1300 GS", url: "https://www.press.bmwgroup.com" },
+      { label: "Motorrijder – BMW R 1300 GS eerste test", url: "https://www.motorrijder.nl" },
+      { label: "Cycle World – BMW R 1300 GS review", url: "https://www.cycleworld.com" },
+    ],
+  },
+  {
+    slug: "bmw-m-1000-rr-circuit-test",
+    titel: "BMW M 1000 RR op het circuit: 220 pk in je handen",
+    datum: "18 mei 2026",
+    leestijd: "8 min",
+    categorie: "Review",
+    kleur: "#c0392b",
+    tags: ["M 1000 RR", "M Serie", "Superbike", "Circuit", "Motorrad"],
+    intro:
+      "220 pk, winglets en een gewicht van 192 kg. De BMW M 1000 RR is de meest extreme straatlegale motor die BMW ooit heeft gemaakt. We testten hem op Assen.",
+    inhoud: [
+      "Toen BMW de M 1000 RR aankondigde, vroeg iedereen zich af of het een echte verbeternis zou zijn ten opzichte van de toch al fenomenale S 1000 RR. Het antwoord is bevestigend, maar met een kanttekening: dit is niet voor de gewone rijder.",
+      "Op TT Circuit Assen is de M 1000 RR ronduit indrukwekkend. De winglets leveren 16 kg neerwaartse kracht bij hoge snelheid, wat de voor stabiliteit bij het remmen en in de bochten ten goede komt. De motor draait door tot 15.100 rpm met een geluid dat je kippenvel geeft.",
+      "Het elektronicapakket is van een ander niveau: BMW RaceABS, Dynamic Traction Control (met pit lane limiter), launch control en shift assistant Pro. Op het circuit is alles instelbaar via knoppen op de stuurklem — je hoeft niet te stoppen.",
+      "Op de openbare weg is de M 1000 RR minder aangenaam. De rijhouding is extreem en de vering hard. Dit is primair een circuitmotor die toevallig ook een kentekenplaat heeft.",
+    ],
+    bronnen: [
+      { label: "BMW Motorrad – M 1000 RR officiële specs", url: "https://www.bmw-motorrad.nl" },
+      { label: "Motor.nl – BMW M 1000 RR rijtest", url: "https://www.motor.nl" },
+      { label: "Motorsport.com – Superbike vergelijkingstest 2025", url: "https://www.motorsport.com" },
+    ],
+  },
+  {
+    slug: "bmw-gs-kopen-welke-generatie",
+    titel: "Welke BMW GS moet je kopen? Alle generaties vergeleken",
+    datum: "10 mei 2026",
+    leestijd: "12 min",
+    categorie: "Koopgids",
+    kleur: "#1c69d4",
+    tags: ["GS Serie", "Koopgids", "Occasion", "Motorrad", "R 1200 GS", "R 1250 GS", "R 1300 GS"],
+    intro:
+      "De BMW GS is de bestverkochte adventure-motor ter wereld. Maar welke generatie is de beste koop? Van de R 1100 GS tot de nieuwe R 1300 GS — we vergelijken ze allemaal.",
+    inhoud: [
+      "R 1100 GS (1993–1999): de eerste echte GS in moderne zin. Solide en betrouwbaar, maar technisch gedateerd. Interessant als klassieker, minder als dagelijkse rijder. Verwacht €3.000–€6.000 voor een goed exemplaar.",
+      "R 1150 GS (1999–2004): meer vermogen (85 pk), verbeterde handling. De Adventure-versie heeft een 30-liter tank. Goede motorblokken, pas op voor roest op het frame bij verwaarloosde exemplaren.",
+      "R 1200 GS (2004–2012): de GS die de klasse definitief dominant maakte. De hexhead-motor (2007+) is robuuster dan de camhead. Dit is de sweetspot voor occasion-kopers: €5.000–€10.000.",
+      "R 1200 GS LC (2013–2018): liquid-cooled, veel moderner. ShiftCam technologie (2017+) maakt hem nog beter. Rijassistentiesystemen zijn nu standaard. €8.000–€14.000 op de occasionmarkt.",
+      "R 1250 GS (2018–2022): topmodel voor wie de nieuwste technologie wil zonder nieuwe aankoopprijs. ShiftCam, 136 pk en uitstekende elektronische ondersteuning. €12.000–€18.000.",
+      "R 1300 GS (2023–heden): de nieuwste, krachtigste en meest geavanceerde. ASA optioneel, 145 pk. Als occasion nog zeldzaam en duur. Als nieuw: €18.750+.",
+      "Conclusie: voor de beste prijs/kwaliteit verhouding, koop een R 1200 GS LC uit 2015–2018 van een BMW-dealer met onderhoudshistorie.",
+    ],
+    bronnen: [
+      { label: "Marktplaats.nl – BMW GS occasion", url: "https://www.marktplaats.nl" },
+      { label: "Motorrijder – GS generaties test", url: "https://www.motorrijder.nl" },
+      { label: "BikeSocial – BMW R 1200 GS buyer's guide", url: "https://www.bikesocial.co.uk" },
+    ],
+  },
+  {
+    slug: "bmw-s1000rr-vs-ducati-panigale",
+    titel: "BMW S 1000 RR vs. Ducati Panigale V4: de ultieme superbike-strijd",
+    datum: "3 mei 2026",
+    leestijd: "10 min",
+    categorie: "Vergelijking",
+    kleur: "#e74c3c",
+    tags: ["S 1000 RR", "Superbike", "Vergelijking", "Ducati", "Motorrad"],
+    intro:
+      "Twee legendarische superbikes, twee filosofieën. BMW zet de precisie tegenover de Italiaanse passie van Ducati. Wie is de betere keuze voor de rijder op de openbare weg én het circuit?",
+    inhoud: [
+      "Op papier is de strijd gelijk: BMW levert 210 pk, Ducati 214 pk. Gewicht: BMW 197 kg, Ducati 198 kg. Prijs: BMW €23.500, Ducati €26.800. Op elk meetpunt liggen ze dicht bij elkaar.",
+      "Op het circuit: de Ducati Panigale V4 is van nature het snelst door zijn V4-motor die een breder koppelband heeft in het hogere toerentalbereik. In de WorldSBK-klasse domineert Ducati. BMW antwoordt met de M 1000 RR.",
+      "Op de openbare weg: BMW wint. De S 1000 RR is gebruiksvriendelijker, heeft een beter elektronicapakket en is minder veeleisend voor de rijder bij normaal gebruik. De Ducati vraagt meer aandacht en kennis.",
+      "Betrouwbaarheid: BMW heeft hier een lichte voorsprong. Ducati-eigenaren melden hogere onderhoudskosten, met name de desmodromische klepsturing (elke 15.000 km kleppen stellen: €600–€1.200).",
+      "Conclusie: kies de Ducati als je een uitgesproken karakter wil en je huis vol racetrofeeën staat. Kies de BMW als je een superbikeervaring wil die ook op maandag naar je werk rijdt.",
+    ],
+    bronnen: [
+      { label: "Autovisie Motor – S 1000 RR vs Panigale V4 test", url: "https://www.autovisie.nl" },
+      { label: "Motorcycle News – Superbike comparison 2025", url: "https://www.motorcyclenews.com" },
+      { label: "Ducati.com – Panigale V4 specs", url: "https://www.ducati.com" },
+    ],
+  },
+  {
+    slug: "bmw-r18-cruiser-review",
+    titel: "BMW R 18 rijtest: de Harley-killer uit München?",
+    datum: "24 april 2026",
+    leestijd: "7 min",
+    categorie: "Review",
+    kleur: "#f39c12",
+    tags: ["R 18", "Cruiser", "R Serie", "Motorrad"],
+    intro:
+      "BMW deed iets wat niemand verwachtte: een echte American-style cruiser bouwen. De R 18 heeft de grootste boxer-twin ooit (1.802 cc) en een prijs van €20.100. Is het een Harley-killer?",
+    inhoud: [
+      "De BMW R 18 is geen subtiele motor. Waar BMW normaal gesproken high-tech en veelzijdigheid biedt, kiest de R 18 voor retro-statement, theater en gevoel. De 1.800 cc boxer-twin rilt en trilt zoals een goede cruiser betaamt.",
+      "91 pk klinkt bescheiden voor zo'n grote motor, maar het koppel (158 Nm bij 3.000 rpm) vertelt het echte verhaal. Je hoeft nauwelijks te schakelen — in elke versnelling heb je genoeg tractie om rustig mee te stromen.",
+      "Het design is onmiskenbaar retro-BMW. Chromen uitlaten, spaken wielen, een eenvoudig dashboard. Geen TFT-scherm, geen rijmodi. Dat voelt opzettelijk — en het werkt. Je rijdt de R 18 om te genieten, niet om data te analyseren.",
+      "Vergelijking met Harley-Davidson: de BMW R 18 rijdt preciezer en is technisch hoger ontwikkeld. De Harley wint op emotie, geluid en community. Beide hebben hun eigen aanhang — en terecht.",
+    ],
+    bronnen: [
+      { label: "BMW Motorrad – R 18 persmap", url: "https://www.press.bmwgroup.com" },
+      { label: "Motor.nl – BMW R 18 rijtest", url: "https://www.motor.nl" },
+      { label: "Motorrijder – Cruiser vergelijking 2025", url: "https://www.motorrijder.nl" },
+    ],
+  },
+  {
+    slug: "bmw-ce04-elektrische-scooter-test",
+    titel: "BMW CE 04: de toekomst van stedelijke mobiliteit getest",
+    datum: "15 april 2026",
+    leestijd: "6 min",
+    categorie: "Review",
+    kleur: "#1abc9c",
+    tags: ["CE 04", "Elektrisch", "Scooter", "Motorrad", "Stedelijk"],
+    intro:
+      "De BMW CE 04 ziet eruit als een motorfiets uit een sciencefictionfilm en rijdt als een serieuze urban commuter. 130 km actieradius, 42 pk en een prijs van €12.900.",
+    inhoud: [
+      "BMW heeft bewust gekozen voor een futuristisch, controversieel design bij de CE 04. Het lage frame, het grote TFT-display en de LED-verlichting communiceren duidelijk: dit is geen klassieke scooter.",
+      "In de stad is de CE 04 in zijn element. Stil, direct en makkelijk door het verkeer te manoeuvreren. Het gewicht van 231 kg is merkbaar bij het parkeren, maar tijdens het rijden valt het mee door het lage zwaartepunt van de batterij.",
+      "De actieradius van 130 km (WLTP) vertaalt zich in de praktijk naar 90–110 km bij normaal stadsgebruik. Snel opladen via DC duurt 1,5 uur tot 80%. Via een gewoon stopcontact ben je in 4,5 uur vol.",
+      "Het 6,5-inch TFT-display is helder en intuïtief. BMW Connectivity werkt prima, inclusief navigatie en telefoonintegratie. Dit is technology die je bij een scooter van €12.900 niet verwacht.",
+    ],
+    bronnen: [
+      { label: "BMW Motorrad – CE 04 specs en actieradius", url: "https://www.bmw-motorrad.nl" },
+      { label: "Tweeletter.nl – BMW CE 04 test", url: "https://www.tweeletter.nl" },
+      { label: "EV-rijders.nl – Elektrische scooter vergelijking", url: "https://www.ev-rijders.nl" },
+    ],
+  },
+];
+
+export function getArtikel(slug: string): Artikel | undefined {
+  return artikelen.find((a) => a.slug === slug);
+}
