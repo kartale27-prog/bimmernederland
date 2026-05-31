@@ -3,6 +3,8 @@
 const resend = new Resend(process.env.RESEND_API_KEY);
 const ADMIN = process.env.ADMIN_EMAIL ?? "kartal.e27@gmail.com";
 const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+// Zolang bimmernederland.nl nog niet geverifieerd is in Resend, sturen we via onboarding@resend.dev
+const FROM = "BimmerNederland <onboarding@resend.dev>";
 
 // Stuur alleen als de API key is ingesteld
 function isConfigured() {
@@ -14,7 +16,7 @@ function isConfigured() {
 export async function mailNieuwAccount(username: string, email: string) {
   if (!isConfigured()) return;
   await resend.emails.send({
-    from: "BimmerNederland <noreply@BimmerNederland.nl>",
+    from: FROM,
     to: ADMIN,
     subject: `👤 Nieuw lid: ${username}`,
     html: `
@@ -50,7 +52,7 @@ export async function mailNieuwTopic(opts: {
   if (!isConfigured()) return;
   const url = `${SITE}/forum/${opts.categorySlug}/${opts.subforumSlug}/${opts.threadId}`;
   await resend.emails.send({
-    from: "BimmerNederland <noreply@BimmerNederland.nl>",
+    from: FROM,
     to: ADMIN,
     subject: `💬 Nieuw topic: ${opts.titel}`,
     html: `
@@ -90,7 +92,7 @@ export async function mailNieuweReactie(opts: {
   const url = `${SITE}/forum/${opts.categorySlug}/${opts.subforumSlug}/${opts.threadId}`;
   const preview = opts.inhoud.slice(0, 200) + (opts.inhoud.length > 200 ? "…" : "");
   await resend.emails.send({
-    from: "BimmerNederland <noreply@BimmerNederland.nl>",
+    from: FROM,
     to: ADMIN,
     subject: `↩️ Nieuwe reactie in: ${opts.threadTitel}`,
     html: `
@@ -143,7 +145,7 @@ export async function mailReactieAanLid(opts: {
     : `<strong>${opts.reactorUsername}</strong> heeft gereageerd in een topic waar jij ook bij betrokken bent:`;
 
   await resend.emails.send({
-    from: "BimmerNederland <noreply@BimmerNederland.nl>",
+    from: FROM,
     to: opts.ontvanger,
     subject: onderwerp,
     html: `
