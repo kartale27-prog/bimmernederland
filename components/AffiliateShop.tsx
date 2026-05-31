@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 // Vervang JOUW_PARTNER_ID met je echte Bol.com partner ID
