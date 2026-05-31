@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 // Vervang JOUW_PARTNER_ID met je echte Bol.com partner ID
-const PARTNER_ID = "JOUW_PARTNER_ID";
+const PARTNER_ID = "1523911";
 
 function bolLink(zoekterm: string) {
   return `https://www.bol.com/nl/nl/s/?searchtext=${encodeURIComponent(zoekterm)}&utm_source=partnernetwork&utm_medium=referral&utm_campaign=${PARTNER_ID}`;
