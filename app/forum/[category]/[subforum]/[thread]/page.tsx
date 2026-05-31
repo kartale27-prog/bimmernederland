@@ -32,11 +32,11 @@ export default async function ThreadPage({ params }: Props) {
     prisma.thread.findUnique({
       where: { id: threadId },
       include: {
-        author: { select: { username: true, createdAt: true, _count: { select: { posts: true } } } },
+        author: { select: { username: true, createdAt: true, avatarUrl: true, _count: { select: { posts: true } } } },
         subforum: { include: { category: true } },
         posts: {
           orderBy: { createdAt: "asc" },
-          include: { author: { select: { username: true, createdAt: true, _count: { select: { posts: true } } } } },
+          include: { author: { select: { username: true, createdAt: true, avatarUrl: true, _count: { select: { posts: true } } } } },
         },
       },
     }),
@@ -79,8 +79,14 @@ export default async function ThreadPage({ params }: Props) {
             <article key={post.id} style={{ background: "#161616", border: "1px solid #2a2a2a", borderRadius: "1rem", overflow: "hidden", display: "flex" }}>
               {/* Avatar sidebar */}
               <div style={{ width: "140px", flexShrink: 0, padding: "1.25rem 1rem", borderRight: "1px solid #1e1e1e", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem", background: "#141414" }}>
-                <div style={{ width: "48px", height: "48px", borderRadius: "50%", background: `hsl(${post.author.username.charCodeAt(0) * 15}, 60%, 35%)`, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: "1.1rem", color: "white" }}>
-                  {post.author.username[0].toUpperCase()}
+                <div style={{ width: "52px", height: "52px", borderRadius: "50%", overflow: "hidden", border: "2px solid #2a2a2a", flexShrink: 0 }}>
+                  {post.author.avatarUrl ? (
+                    <img src={post.author.avatarUrl} alt={post.author.username} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  ) : (
+                    <div style={{ width: "100%", height: "100%", background: `hsl(${post.author.username.charCodeAt(0) * 15}, 60%, 35%)`, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: "1.1rem", color: "white" }}>
+                      {post.author.username[0].toUpperCase()}
+                    </div>
+                  )}
                 </div>
                 <div style={{ fontWeight: 700, fontSize: "0.85rem", textAlign: "center", wordBreak: "break-all" }}>{post.author.username}</div>
                 <div style={{ color: "#555", fontSize: "0.72rem", textAlign: "center" }}>{post.author._count.posts} berichten</div>

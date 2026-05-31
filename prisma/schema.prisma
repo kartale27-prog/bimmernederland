@@ -14,8 +14,9 @@ model User {
   passwordHash         String
   createdAt            DateTime @default(now())
   // Notificatie-instellingen
-  notifEigenTopic      Boolean  @default(true)   // reactie op mijn eigen topic
-  notifBetrokkenThread Boolean  @default(true)   // reactie in thread waar ik ook gepost heb
+  notifEigenTopic      Boolean  @default(true)
+  notifBetrokkenThread Boolean  @default(true)
+  avatarUrl            String?  // base64 of externe URL
   threads              Thread[]
   posts                Post[]
 }

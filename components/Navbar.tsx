@@ -15,9 +15,10 @@ const links = [
 
 interface Props {
   session?: { username: string } | null;
+  avatarUrl?: string | null;
 }
 
-export default function Navbar({ session }: Props) {
+export default function Navbar({ session, avatarUrl }: Props) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -48,9 +49,15 @@ export default function Navbar({ session }: Props) {
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginLeft: "0.5rem", paddingLeft: "1rem", borderLeft: "1px solid #2a2a2a" }}>
             {session ? (
               <>
-                <Link href="/account" style={{ color: "#ccc", textDecoration: "none", fontSize: "0.85rem", display: "flex", alignItems: "center", gap: "0.4rem" }}>
-                  <span style={{ width: "28px", height: "28px", borderRadius: "50%", background: "#1c69d4", display: "inline-flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.75rem" }}>
-                    {session.username[0].toUpperCase()}
+                <Link href="/account" style={{ color: "#ccc", textDecoration: "none", fontSize: "0.85rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                  <span style={{ width: "28px", height: "28px", borderRadius: "50%", overflow: "hidden", flexShrink: 0, border: "1px solid #3a3a3a" }}>
+                    {avatarUrl ? (
+                      <img src={avatarUrl} alt={session.username} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                    ) : (
+                      <span style={{ width: "100%", height: "100%", background: "#1c69d4", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.75rem", color: "white" }}>
+                        {session.username[0].toUpperCase()}
+                      </span>
+                    )}
                   </span>
                   {session.username}
                 </Link>

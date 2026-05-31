@@ -21,6 +21,25 @@ export async function updateNotifications(_prev: State, formData: FormData): Pro
   return { success: true };
 }
 
+export async function updateAvatar(_prev: State, formData: FormData): Promise<State> {
+  const session = await getSession();
+  if (!session) return { error: "Niet ingelogd." };
+
+  const avatarUrl = (formData.get("avatarUrl") as string)?.trim();
+  if (!avatarUrl) return { error: "Geen afbeelding ontvangen." };
+
+  // Max 1MB voor base64
+  if (avatarUrl.length > 1_400_000) return { error: "Afbeelding is te groot. Maximaal 1MB." };
+
+  await prisma.user.update({
+    where: { id: session.userId },
+    data: { avatarUrl },
+  });
+
+  revalidatePath("/account");
+  return { success: true };
+}
+
 export async function updateWachtwoord(_prev: State, formData: FormData): Promise<State> {
   const session = await getSession();
   if (!session) return { error: "Niet ingelogd." };
